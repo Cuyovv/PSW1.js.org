@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Calculator</title>
+    <title>JS Calculator & Code</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f9; }
-        .calc-container { border: 2px solid #333; display: inline-block; padding: 20px; border-radius: 10px; background: white; }
-        input { width: 50px; padding: 10px; margin: 10px; border-radius: 5px; border: 1px solid #ccc; }
-        select { padding: 10px; border-radius: 5px; }
-        button { padding: 10px 20px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
-        #result { margin-top: 20px; font-weight: bold; font-size: 1.2rem; color: #333; }
+        body { font-family: sans-serif; text-align: center; padding: 50px 20px; background-color: #f4f4f9; }
+        .calc-container { border: 2px solid #333; display: inline-block; padding: 20px; border-radius: 10px; background: white; margin-bottom: 40px; }
+        input { width: 60px; padding: 10px; margin: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 5px; font-weight: bold; }
+        #result { margin-top: 20px; font-weight: bold; font-size: 1.2rem; color: #007bff; }
+        
+        /* Code Display Area */
+        .code-display { text-align: left; max-width: 600px; margin: 0 auto; background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; }
+        pre { white-space: pre-wrap; word-wrap: break-word; }
+        h3 { color: #333; }
     </style>
 </head>
 <body>
 
     <div class="calc-container">
-        <h2>Simple JS Calculator</h2>
+        <h2>JS Calculator</h2>
         <input type="number" id="num1" placeholder="0">
-        <select id="operator">
+        <select id="operator" style="padding: 10px;">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
@@ -28,6 +32,15 @@
         <br>
         <button onclick="runCalculation()">Calculate</button>
         <div id="result">Result: --</div>
+    </div>
+
+    <hr>
+
+    <h3>JavaScript Logic:</h3>
+    <div class="code-display">
+        <pre id="code-viewer">
+// Your JavaScript code will appear here...
+        </pre>
     </div>
 
     <script src="script.js"></script>
